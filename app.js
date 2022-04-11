@@ -12,9 +12,9 @@ const h3 = document.querySelector(`h3`);
 
 // Q 2b
 
-h3.addEventListener('mouseout', () =>{
+h3.addEventListener('mouseover', () =>{
     alert(`"You hovered over the h3 element! Congrats!"`)
-});
+},{once:true});
 
 
 // });
@@ -35,13 +35,15 @@ form.addEventListener(`submit`, () => {
 // Q 4a
 
 const darkMode = document.getElementById(`dm`);
-const body = document.querySelector(`body`);
+const body = document.querySelector(`*`);
 
 // Q 4b
 
 darkMode.addEventListener('click',() => {
     body.classList.toggle(`dark-mode`);
 });
+
+
 
 // Q 5a
 
@@ -64,3 +66,23 @@ times.onclick = () =>{
         }
 
 };
+
+// or 
+/*
+times.addEventListener(`click` = () =>{
+    click++;
+        if(click <= 2){
+            alert("You clicked the last button! Congrats!");
+
+        } else if (click === 3){
+            alert("OH NO! This button is NOT going to work anymore");
+
+        } else{
+            times.disabled = true;
+
+        }
+
+});
+*/
+
+
